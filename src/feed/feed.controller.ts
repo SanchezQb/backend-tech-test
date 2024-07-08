@@ -11,7 +11,7 @@ export class FeedController {
   @Get(':id')
   findOne(@Param('userId') userId: string,
     @Query('limit') limit?: number) {
-    return this.feedService.feed(+userId, limit);
+    return this.feedService.feed(+userId, +limit);
   }
 
 }
