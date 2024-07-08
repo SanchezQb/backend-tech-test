@@ -13,5 +13,6 @@ import { UserModule } from 'src/user/user.module';
   ],
   controllers: [MediaController],
   providers: [MediaService],
+  exports: [MediaService]
 })
 export class MediaModule { }

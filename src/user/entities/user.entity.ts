@@ -22,6 +22,10 @@ export class User {
     @OneToMany(() => Media, media => media.user, { cascade: true })
     media: Media[]
 
+    @ManyToMany(() => Media, media => media.viewedBy)
+    @JoinTable()
+    viewedMedia: Media[]
+
     @CreateDateColumn()
     createdAt: Date
 

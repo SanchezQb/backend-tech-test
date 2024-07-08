@@ -6,6 +6,7 @@ import { MediaModule } from './media/media.module';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import config from './config';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { FeedModule } from './feed/feed.module';
 
 @Module({
   imports: [
@@ -32,7 +33,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
         load: [config]
       }
     ),
-    UserModule, MediaModule,
+    UserModule, MediaModule, FeedModule,
   ],
   controllers: [AppController],
   providers: [AppService],
